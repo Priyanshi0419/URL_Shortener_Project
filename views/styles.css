@@ -1,0 +1,61 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Report Section - Centered Box */
+.report-section {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading Style */
+.report-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Student List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Student Data Items */
+ul li {
+    background: #fafafa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Paragraph Styling */
+ul li p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Highlight Student Name */
+ul li p:first-child {
+    font-weight: bold;
+    color: #007bff;
+}

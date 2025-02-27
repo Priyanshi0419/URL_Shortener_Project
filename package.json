@@ -1,0 +1,24 @@
+{
+  "name": "url_shortner",
+  "version": "1.0.0",
+  "main": "apps.js",
+  "type": "module",
+  "scripts": {
+    "start": "node apps.js",
+    "dev": "nodemon apps.js"
+  },
+  "author": "Priyanshi",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^5.0.0",
+    "mongodb": "^6.13.0",
+    "mysql2": "^3.12.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
