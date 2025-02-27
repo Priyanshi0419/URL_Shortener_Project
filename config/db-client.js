@@ -14,3 +14,9 @@ export const db=await mysql.createConnection({
     password:env.DATABASE_PASSWORD,
     database:env.DATABASE_NAME,
 })
+/*
+import mysql from "mysql2/promise";
+import {env} from "./env.js"*/
+//create a connection
+
+ 
