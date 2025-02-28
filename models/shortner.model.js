@@ -49,6 +49,3 @@ export const savelinks=async (link) =>{
 export const getLinkByShortCode = async (shortCode) => {
     return await shortnerCollection.findOne({ shortCode: shortCode });
 };
-
-await shortnerCollection.deleteMany({});
-console.log("All short URLs have been deleted.");
