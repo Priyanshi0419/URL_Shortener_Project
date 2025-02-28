@@ -36,6 +36,7 @@ catch(err){
     return res.status(500).send("Internal Server Error");
     }
 }
+
 export async function redirectToShortLink(req, res) {
     try {
         const { shortCode } = req.params;
@@ -49,10 +50,12 @@ export async function redirectToShortLink(req, res) {
         }
 
         console.log("Redirecting to:", link.URL); // Debugging log
-        return res.redirect(link.URL);  // Ensure this is a valid URL
+        return res.redirect(link.url);  // Ensure this is a valid URL
     } catch (err) {
         console.error("Redirect Error:", err);
         return res.status(500).send("Internal Server Error");
     }
 }
+
+
 

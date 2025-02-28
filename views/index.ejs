@@ -23,11 +23,11 @@
 
 <h2>Shortened URLs</h2>
 <ul> 
-    <%links.forEach(({SHORT_CODE,URL})=>{%>
+    <%links.forEach(({shortCode,url})=>{%>
         <li>
-            <a href="/<%= SHORT_CODE%>" target="_blank">
-           <%= host %>/<%=SHORT_CODE %>     
-            </a>-<%=URL %>
+            <a href="/<%= shortCode%>" target="_blank">
+           <%= host %>/<%=shortCode %>     
+            </a>-<%=url %>
         </li>
         <%})%>
   </ul>

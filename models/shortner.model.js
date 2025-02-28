@@ -1,11 +1,11 @@
-/*import {dbClient} from "../config/db-client.js"
+import {dbClient} from "../config/db-client.js"
 import { env } from "../config/env.js"
 
 const db=dbClient.db(env.MONGODB_DATABASE_NAME);
 const shortnerCollection=db.collection("shorteners");
-*/
 
-import {db} from "../config/db-client.js"
+/*
+import db from "../config/db-client.js"
 
 export const loadlinks=async()=>{
     //read data 
@@ -37,4 +37,18 @@ export const getLinkByShortCode = async (shortCode) => {
       return null;
   }
 };
+*/
+export const loadlinks=async () =>{
+    return shortnerCollection.find({}).toArray();
+};
 
+export const savelinks=async (link) =>{
+    return shortnerCollection.insertOne(link);
+};
+
+export const getLinkByShortCode = async (shortCode) => {
+    return await shortnerCollection.findOne({ shortCode: shortCode });
+};
+
+await shortnerCollection.deleteMany({});
+console.log("All short URLs have been deleted.");
