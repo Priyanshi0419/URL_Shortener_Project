@@ -49,7 +49,7 @@ export async function redirectToShortLink(req, res) {
             return res.redirect("/404");
         }
 
-        console.log("Redirecting to:", link.URL); // Debugging log
+        console.log("Redirecting to:", link.url); // Debugging log
         return res.redirect(link.url);  // Ensure this is a valid URL
     } catch (err) {
         console.error("Redirect Error:", err);
