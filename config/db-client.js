@@ -1,8 +1,22 @@
-import {MongoClient} from "mongodb";
-import {env} from "./env.js";
+import { MongoClient } from "mongodb";
+import { env } from "./env.js"; 
 
-console.log("MongoDB URI:", env.MONGODB_URI); // Debugging step
-export const dbClient=new MongoClient(env.MONGODB_URI);
+const dbClient = new MongoClient(env.MONGODB_URI);
+
+async function connectDB() {
+    try {
+        await dbClient.connect(); // Ensure connection is established
+        console.log("MongoDB Connected Successfully!");
+    } catch (error) {
+        console.error("MongoDB Connection Error:", error);
+        process.exit(1); // Exit if connection fails
+    }
+}
+
+connectDB(); // Call the function to connect
+
+export { dbClient };
+
 /*
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
